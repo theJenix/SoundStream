@@ -77,7 +77,10 @@ public class BluetoothUtils {
     }
 
     public static void disableDiscovery(Context context) {
-        //TODO: this
+//        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+//        if (mBluetoothAdapter != null) {
+//            mBluetoothAdapter.cancelDiscovery();
+//        }
     }
 
     public static void enableDiscovery(Context context) {

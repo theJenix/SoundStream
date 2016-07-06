@@ -228,6 +228,7 @@ public class ConnectionWriter {
                 Log.d(TAG, "Message " + qe.messageNo + " written, it's a " + qe.messageClass.getSimpleName() + ", " + read + " bytes in length");
             }
             outStream.write(outBytes, 0, read);
+            outStream.flush();
             int left = qe.messageStream.available();
             //if there are bytes left to write, add this message back into the queue
             // to write at the next opportunity

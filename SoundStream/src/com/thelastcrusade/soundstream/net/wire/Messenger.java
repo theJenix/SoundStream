@@ -76,7 +76,7 @@ public class Messenger {
     private static final int MAX_READ_SIZE_BYTES = 4096;
     private byte[] inBytes = new byte[MAX_READ_SIZE_BYTES];
 
-    private static final int MAX_WRITE_SIZE_BYTES = 4096;
+    private static final int MAX_WRITE_SIZE_BYTES = 40960;
 
     //default is 1 hour, which should be plenty of time
     private static final int CANCELED_MESSAGES_TTL_MINUTES_DEFAULT = 60;

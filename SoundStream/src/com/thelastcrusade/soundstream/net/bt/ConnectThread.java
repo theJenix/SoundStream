@@ -24,6 +24,7 @@ import java.util.UUID;
 
 import com.thelastcrusade.soundstream.R;
 import com.thelastcrusade.soundstream.net.UnableToCreateSocketException;
+import com.thelastcrusade.soundstream.util.BluetoothUtils;
 
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
@@ -64,6 +65,7 @@ public abstract class ConnectThread extends AsyncTask<Void, Void, BluetoothSocke
         try {
             // Connect the device through the socket. This will block
             // until it succeeds or throws an exception
+            BluetoothUtils.disableDiscovery(this.mmContext);
             mmSocket.connect();
             Log.i(TAG, "Socket connected");
         } catch (IOException e) {
